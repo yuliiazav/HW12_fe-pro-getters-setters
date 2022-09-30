@@ -20,4 +20,45 @@ export const school = {
     6: new Student('Eugene', [97, 34, 78, 85, 98, 65]),
     7: new Student('Ivan', [76, 89, 78, 98, 98, 99, 89, 96]),
   },
+  get aGradeStudents() {
+    let student = Object.values(this.students).filter((user) => {
+      return Number(user.averageGrade) >= 90
+    })
+        .map((user) => user.name)
+        .join(', ');
+console.log(student);
+  },
+
+  get bGradeStudents() {
+    let student = Object.values(this.students).filter((user) => {
+
+      return Number(user.averageGrade) < 89 && Number(user.averageGrade) >= 75
+    })
+        .map((user) => user.name)
+        .join(', ');
+    console.log(student);
+  },
+
+  get cGradeStudents() {
+    let student = Object.values(this.students).filter((user) => {
+
+      return Number(user.averageGrade) < 75 && Number(user.averageGrade) >= 60
+    })
+        .map((user) => user.name)
+        .join(', ');
+    console.log(student);
+  },
+
+  get dGradeStudents() {
+    let student = Object.values(this.students).filter((user) => {
+
+      return Number(user.averageGrade) < 59
+    })
+        .map((user) => user.name)
+        .join(', ');
+    console.log(student);
+  },
+
 };
+
+
