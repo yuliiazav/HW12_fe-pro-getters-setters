@@ -26,7 +26,9 @@ export const school = {
     })
         .map((user) => user.name)
         .join(', ');
-   },
+     return student;
+
+  },
 
   get bGradeStudents() {
     let student = Object.values(this.students).filter((user) => {
@@ -35,7 +37,10 @@ export const school = {
     })
         .map((user) => user.name)
         .join(', ');
-   },
+     return student;
+
+
+  },
 
   get cGradeStudents() {
     let student = Object.values(this.students).filter((user) => {
@@ -44,7 +49,8 @@ export const school = {
     })
         .map((user) => user.name)
         .join(', ');
-   },
+     return student;
+  },
 
   get dGradeStudents() {
     let student = Object.values(this.students).filter((user) => {
@@ -53,7 +59,9 @@ export const school = {
     })
         .map((user) => user.name)
         .join(', ');
-   },
+     return student;
+
+  },
 
 };
 
